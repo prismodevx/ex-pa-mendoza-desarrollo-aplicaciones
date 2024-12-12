@@ -30,7 +30,7 @@
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <a href="#" class="dropdown-item text-sm"><i class="fas fa-user-cog text-primary"></i> Perfil</a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer"><i class="fas fa-sign-out-alt text-danger"></i> Cerrar
+                <a href="/logout" class="dropdown-item dropdown-footer"><i class="fas fa-sign-out-alt text-danger"></i> Cerrar
                     sesión</a>
             </div>
         </li>
@@ -104,8 +104,8 @@
 <!--                                <p>Unidades</p>-->
 <!--                            </a>-->
 <!--                        </li>-->
-                        <li class="nav-item">
-                            <a id="liEvento" href="/eventos" class="nav-link">
+                        <li class="nav-item" th:if="${roles.contains('ROLE_ADMIN')}">
+                            <a id="liEvento" href="/eventos" class="nav-link" >
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Eventos</p>
                             </a>
